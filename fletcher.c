@@ -64,22 +64,22 @@ int main(int argc, char* argv[])
 	size_t len3 = strlen(str3); 
 
 	uint16_t f16 = fletcher16((const uint8_t*) str1,  len1);
-	printf("fletcher16(%s,%u) -> %u (0x%04X)\n",  str1, len1, f16,f16);
+	printf("fletcher16(%s,%lu) -> %u (0x%04X)\n",  str1, len1, f16,f16);
 
 	f16 = fletcher16((const uint8_t*) str2,  len2);
-	printf("fletcher16(%s,%u) -> %u (0x%04X)\n", str2, len2, f16,f16);
+	printf("fletcher16(%s,%lu) -> %u (0x%04X)\n", str2, len2, f16,f16);
 
 	f16 = fletcher16((const uint8_t*) str3,  len3);
-	printf("fletcher16(%s,%u) -> %u (0x%04X)\n", str2, len3, f16,f16);
+	printf("fletcher16(%s,%lu) -> %u (0x%04X)\n", str2, len3, f16,f16);
 
 	uint32_t f32 = fletcher32((const uint16_t*) str1,  len1);
-	printf("fletcher32(%s,%u) -> %u (0x%08X)\n",  str1, len1, f32,f32);
+	printf("fletcher32(%s,%lu) -> %u (0x%08X)\n",  str1, len1, f32,f32);
 
 	f32 = fletcher32((const uint16_t*) str2,  len2);
-	printf("fletcher32(%s,%u) -> %u (0x%08X)\n", str2, len2, f32,f32);
+	printf("fletcher32(%s,%lu) -> %u (0x%08X)\n", str2, len2, f32,f32);
 
 	f32 = fletcher32((const uint16_t*) str3,  len3);
-	printf("fletcher32(%s,%u) -> %u (0x%08X)\n", str3, len3, f32,f32);
+	printf("fletcher32(%s,%lu) -> %u (0x%08X)\n", str3, len3, f32,f32);
 
 	return 0;
 }
